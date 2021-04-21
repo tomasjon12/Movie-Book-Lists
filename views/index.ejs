@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> My movie and book lists </h1>
+    
+    <h2>Movie</h2>
+    <form action="/Movies" method="POST">
+        <input type="text" placeholder="Movie's name" name="MoviesName">
+        <input type="text" placeholder="Author" name="MoviesAuthor">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Book</h2>
+    <form action="/Books" method="POST">
+        <input type="text" placeholder="Book's name" name="BooksName">
+        <input type="text" placeholder="Author" name="BooksAuthor">
+        <button type="submit">Submit</button>
+    </form>
+
+    <button id="ViewMovies">View Movies List</button>
+    <button id="ViewBooks">View Books List</button>
+
+    <ul class="quotes">
+        <h1>afsaf</h1>
+        <% for(var i = 0; i < movies.length; i++) {%>
+          <li class="quote">
+            <span><%= movies[i].MoviesName %></span>:
+            <span><%= movies[i].MoviesAuthor %></span>
+          </li>
+        <% } %>
+   </ul>
+
+   <script src="/main.js"></script>
+</body>
+</html>
